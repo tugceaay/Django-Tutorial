@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def wellcome(request):
-    return HttpResponse("Hoşgeldiniz!")
+    return HttpResponse("Hoşgeldiniz beyefendi!..")
 
 def goodbye(request, name):
     if "Fatih" not in name:
