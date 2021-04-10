@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SchoolModel, StudentModel, ClassModel
+from .models import SchoolModel, StudentModel, ClassModel, ParentModel
 
 
 
@@ -8,3 +8,4 @@ from .models import SchoolModel, StudentModel, ClassModel
 admin.site.register(SchoolModel)
 admin.site.register(StudentModel)
 admin.site.register(ClassModel)
+admin.site.register(ParentModel)

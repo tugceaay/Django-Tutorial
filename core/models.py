@@ -26,3 +26,10 @@ class StudentModel(models.Model):
         return self.classname.school.name.upper() + ": " + self.classname.name + " - " + self.name + " ({})".format(self.number)
 
 
+class ParentModel(models.Model):
+    name = models.CharField(max_length=100, default="İsimsiz")
+    telno = models.CharField(max_length=100, default="Numara eklenmemiş.")
+    childname = models.ForeignKey(StudentModel, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name + " [{}] ".format(self.childname)
